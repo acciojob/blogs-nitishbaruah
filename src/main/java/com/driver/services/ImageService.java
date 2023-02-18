@@ -53,6 +53,5 @@ public class ImageService {
 
         return screenDimension/imageDimension;
 
-
     }
 }
