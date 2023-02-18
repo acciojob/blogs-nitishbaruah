@@ -17,7 +17,6 @@ public class Blog {
     private String title;
     private String content;
 
-    @CreationTimestamp
     private Date pubDate;
 
     @ManyToOne

@@ -27,6 +27,7 @@ public class BlogService {
         blog.setContent(content);
         blog.setTitle(title);
         blog.setUser(user);
+        blog.setPubDate(new Date());
         user.getBlogList().add(blog);
         userRepository1.save(user);
         return blog;
