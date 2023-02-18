@@ -33,7 +33,7 @@ public class BlogService {
     }
 
     public void deleteBlog(int blogId){
-        Blog blog=blogRepository1.findById(blogId).get();
+       /* Blog blog=blogRepository1.findById(blogId).get();
         User user=blog.getUser();
         List<Blog> blogList=user.getBlogList();
         for(Blog blog1:blogList){
@@ -43,7 +43,7 @@ public class BlogService {
             }
         }
         user.setBlogList(blogList);
-        userRepository1.save(user);
+        userRepository1.save(user)*/
         blogRepository1.deleteById(blogId);
 
 
