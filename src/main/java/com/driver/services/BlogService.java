@@ -33,16 +33,20 @@ public class BlogService {
     }
 
     public void deleteBlog(int blogId){
-        blogRepository1.deleteById(blogId);
-        /*Blog blog=blogRepository1.findById(blogId).get();
-        /*
+        Blog blog=blogRepository1.findById(blogId).get();
         User user=blog.getUser();
-        List<Blog> blogList=user.getBlogs();
+        List<Blog> blogList=user.getBlogList();
         for(Blog blog1:blogList){
             if(blog1.equals(blog)){
-
+                blogList.remove(blog1);
+                break;
             }
-        }*/
+        }
+        user.setBlogList(blogList);
+        userRepository1.save(user);
+        blogRepository1.deleteById(blogId);
+
+
 
 
     }
