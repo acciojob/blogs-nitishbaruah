@@ -17,10 +17,10 @@ public class User {
     private String lastName;
 
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
-    private List<Blog> blogs;
+    private List<Blog> blogList;
 
     public User() {
-        this.blogs=new ArrayList<>();
+        this.blogList=new ArrayList<>();
     }
 
     public int getId() {
@@ -63,11 +63,11 @@ public class User {
         this.lastName = lastName;
     }
 
-    public List<Blog> getBlogs() {
-        return blogs;
+    public List<Blog> getBlogList() {
+        return blogList;
     }
 
-    public void setBlogs(List<Blog> blogs) {
-        this.blogs = blogs;
+    public void setBlogList(List<Blog> blogList) {
+        this.blogList = blogList;
     }
 }
